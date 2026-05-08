@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -33,7 +33,6 @@
     overflow-x: hidden;
   }
 
-  /* noise */
   body::before {
     content: '';
     position: fixed; inset: 0;
@@ -41,7 +40,6 @@
     pointer-events: none; z-index: 999; opacity: 0.5;
   }
 
-  /* ── Italian stripe accent top ── */
   .stripe-top {
     position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 200;
     background: linear-gradient(90deg, var(--green) 33.3%, #fff 33.3%, #fff 66.6%, var(--red) 66.6%);
@@ -60,11 +58,8 @@
 
   .nav-logo {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.9rem;
-    letter-spacing: 2px;
-    flex-shrink: 0;
-    display: flex; align-items: baseline; gap: 0;
-    line-height: 1;
+    font-size: 1.9rem; letter-spacing: 2px;
+    flex-shrink: 0; display: flex; align-items: baseline; gap: 0; line-height: 1;
   }
   .nl-fra { color: var(--green); }
   .nl-te  { color: #fff; }
@@ -77,9 +72,9 @@
   .nav-links::-webkit-scrollbar { display: none; }
   .nav-links a {
     color: var(--muted); text-decoration: none;
-    font-size: 0.68rem; font-weight: 800;
+    font-size: 0.67rem; font-weight: 800;
     text-transform: uppercase; letter-spacing: 0.5px;
-    padding: 0.3rem 0.55rem; border-radius: 4px;
+    padding: 0.28rem 0.52rem; border-radius: 4px;
     transition: color 0.2s, background 0.2s; white-space: nowrap;
   }
   .nav-links a:hover { color: var(--green2); background: rgba(26,122,46,0.1); }
@@ -93,7 +88,6 @@
     padding: 6rem 2rem 4rem;
   }
 
-  /* diagonal Italian stripes bg */
   .hero-bg {
     position: absolute; inset: 0;
     background:
@@ -110,12 +104,8 @@
     background-size: 55px 55px;
     animation: gridMove 22s linear infinite;
   }
-  @keyframes gridMove {
-    0%   { transform: translateY(0); }
-    100% { transform: translateY(55px); }
-  }
+  @keyframes gridMove { 0% { transform: translateY(0); } 100% { transform: translateY(55px); } }
 
-  /* Italian flag bars decorative */
   .hero-flag {
     position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
     background: linear-gradient(90deg, var(--green) 33.3%, #fff 33.3%, #fff 66.6%, var(--red) 66.6%);
@@ -142,10 +132,7 @@
     position: relative; z-index: 1;
   }
   .ht-fra { color: var(--green); }
-  .ht-te  {
-    color: #fff;
-    text-shadow: 0 0 60px rgba(255,255,255,0.15);
-  }
+  .ht-te  { color: #fff; text-shadow: 0 0 60px rgba(255,255,255,0.15); }
   .ht-llo { color: var(--red); }
 
   .hero-sub {
@@ -173,10 +160,7 @@
     border-radius: 50%; box-shadow: 0 0 8px #00e676;
     animation: pulse 2s infinite;
   }
-  @keyframes pulse {
-    0%,100% { opacity: 1; transform: scale(1); }
-    50%      { opacity: 0.5; transform: scale(0.8); }
-  }
+  @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
 
   .hero-scroll {
     position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
@@ -189,19 +173,12 @@
     border-right: 2px solid var(--green2); border-bottom: 2px solid var(--green2);
     transform: rotate(45deg); animation: bounce 1.5s infinite;
   }
-  @keyframes bounce {
-    0%,100% { transform: rotate(45deg) translateY(0); }
-    50%      { transform: rotate(45deg) translateY(5px); }
-  }
+  @keyframes bounce { 0%,100% { transform: rotate(45deg) translateY(0); } 50% { transform: rotate(45deg) translateY(5px); } }
 
   /* ── MENU ── */
-  .menu-container {
-    max-width: 1300px; margin: 0 auto; padding: 0 1.5rem 6rem;
-  }
+  .menu-container { max-width: 1300px; margin: 0 auto; padding: 0 1.5rem 6rem; }
 
-  .menu-section {
-    margin-bottom: 5rem; scroll-margin-top: 76px;
-  }
+  .menu-section { margin-bottom: 5rem; scroll-margin-top: 76px; }
 
   .section-header {
     display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; position: relative;
@@ -220,7 +197,6 @@
   }
   .section-badge .emoji { font-size: 1.4rem; }
 
-  /* Category colors — Italian palette */
   .badge-pizza      { background: rgba(204,26,26,0.12);  border: 1px solid rgba(204,26,26,0.28);  color: #e84040; }
   .badge-burger     { background: rgba(232,184,75,0.1);  border: 1px solid rgba(232,184,75,0.25); color: var(--gold); }
   .badge-plats      { background: rgba(26,122,46,0.12);  border: 1px solid rgba(26,122,46,0.28);  color: var(--green2); }
@@ -237,6 +213,8 @@
   .badge-desserts   { background: rgba(232,184,75,0.1);  border: 1px solid rgba(232,184,75,0.22); color: #e8b84b; }
   .badge-salades    { background: rgba(26,122,46,0.12);  border: 1px solid rgba(26,122,46,0.28);  color: #4ddd6a; }
   .badge-jus        { background: rgba(255,180,40,0.1);  border: 1px solid rgba(255,180,40,0.22); color: #ffcc40; }
+  .badge-boisson    { background: rgba(180,100,40,0.1);  border: 1px solid rgba(180,100,40,0.22); color: #c87840; }
+  .badge-supplement { background: rgba(120,120,120,0.1); border: 1px solid rgba(120,120,120,0.2); color: #aaaaaa; }
 
   /* ── MENU GRID ── */
   .menu-grid {
@@ -265,16 +243,10 @@
   }
   .menu-card:hover::before { opacity: 1; }
 
-  .item-name {
-    font-weight: 700; font-size: 0.88rem; color: var(--text); line-height: 1.3;
-  }
-  .item-sub {
-    font-size: 0.72rem; color: var(--muted); font-weight: 600;
-    margin-top: 0.15rem; line-height: 1.3;
-  }
+  .item-name { font-weight: 700; font-size: 0.88rem; color: var(--text); line-height: 1.3; }
+  .item-sub  { font-size: 0.72rem; color: var(--muted); font-weight: 600; margin-top: 0.15rem; line-height: 1.3; }
   .item-info { display: flex; flex-direction: column; flex: 1; }
 
-  /* Price variants */
   .price-tag {
     background: linear-gradient(135deg, var(--red), #e04040);
     color: #fff; font-weight: 800; font-size: 0.88rem;
@@ -284,19 +256,15 @@
   }
   .price-tag sup { font-size: 0.52rem; font-weight: 700; opacity: 0.9; vertical-align: super; }
 
-  /* Double price (petit/grand) */
-  .price-double {
-    display: flex; flex-direction: column; gap: 3px; align-items: flex-end; flex-shrink: 0;
-  }
-  .price-small { background: linear-gradient(135deg, var(--green), var(--green2)); }
-  .price-big   { background: linear-gradient(135deg, var(--red), #e04040); }
-  .price-label {
+  .price-double { display: flex; flex-direction: column; gap: 3px; align-items: flex-end; flex-shrink: 0; }
+  .price-small  { background: linear-gradient(135deg, var(--green), var(--green2)); }
+  .price-big    { background: linear-gradient(135deg, var(--red), #e04040); }
+  .price-label  {
     font-size: 0.55rem; font-weight: 800; letter-spacing: 0.5px;
     opacity: 0.75; text-align: center; margin-bottom: 1px; color: var(--muted);
     text-transform: uppercase;
   }
 
-  /* Tacos options note */
   .section-note {
     margin-top: 0.8rem;
     background: rgba(255,255,255,0.03);
@@ -337,44 +305,23 @@
     padding: 3rem 2rem 2rem;
     text-align: center;
   }
-
-  .footer-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3.5rem; letter-spacing: 4px;
-    margin-bottom: 1.5rem; line-height: 1;
-  }
-
-  .footer-contacts {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem;
-  }
-  .footer-item {
-    display: flex; align-items: center; gap: 0.5rem;
-    color: var(--muted); font-size: 0.88rem; font-weight: 600;
-  }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; letter-spacing: 4px; margin-bottom: 1.5rem; line-height: 1; }
+  .footer-contacts { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+  .footer-item { display: flex; align-items: center; gap: 0.5rem; color: var(--muted); font-size: 0.88rem; font-weight: 600; }
   .footer-item .icon { font-size: 1.1rem; }
   .footer-item a { text-decoration: none; transition: color 0.2s; }
   .footer-item a:hover { color: #fff; }
   .fi-green a, .fi-green span { color: var(--green2); }
   .fi-red   a, .fi-red   span { color: var(--red2); }
   .fi-gold  a, .fi-gold  span { color: var(--gold); }
-
-  .footer-stripe {
-    width: 80px; height: 3px; margin: 1.2rem auto;
-    background: linear-gradient(90deg, var(--green) 33.3%, #fff 33.3%, #fff 66.6%, var(--red) 66.6%);
-    border-radius: 2px;
-  }
-
+  .footer-stripe { width: 80px; height: 3px; margin: 1.2rem auto; background: linear-gradient(90deg, var(--green) 33.3%, #fff 33.3%, #fff 66.6%, var(--red) 66.6%); border-radius: 2px; }
   .footer-copy { color: #333; font-size: 0.75rem; letter-spacing: 1px; }
 
   /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(22px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
   .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-  /* ── MOBILE ── */
   @media (max-width: 640px) {
     .nav-logo { font-size: 1.4rem; }
     .nav-links a { font-size: 0.63rem; padding: 0.28rem 0.45rem; }
@@ -408,6 +355,8 @@
     <li><a href="#salades">🥗 Salades</a></li>
     <li><a href="#desserts">🍮 Desserts</a></li>
     <li><a href="#jus">🧃 Jus</a></li>
+    <li><a href="#boisson">☕ Café</a></li>
+    <li><a href="#supplement">➕ Suppléments</a></li>
   </ul>
 </nav>
 
@@ -423,7 +372,8 @@
   <p class="hero-sub">Fast Food | <span>Avenue Kifah, Rabat</span></p>
   <div class="hero-badges">
     <div class="hero-badge"><span class="dot"></span> Open 24/7</div>
-    <div class="hero-badge">📞 05 38 11 64 28</div>
+    <div class="hero-badge">📞 06 77 67 29 11</div>
+    <div class="hero-badge">📞 06 18 25 08 85</div>
     <div class="hero-badge">🚀 Livraison Express</div>
     <div class="hero-badge">📍 Avenue Kifah</div>
   </div>
@@ -436,15 +386,24 @@
 <!-- ── MENU ── -->
 <div class="menu-container">
 
-  <!-- PIZZA -->
+  <!-- ══ PIZZA ══ -->
   <section class="menu-section fade-in" id="pizza">
     <div class="section-header">
       <div class="section-badge badge-pizza"><span class="emoji">🍕</span> PIZZA</div>
     </div>
     <div class="menu-grid">
-      <!-- Petit / Grand -->
       <div class="menu-card">
         <div class="item-info"><span class="item-name">Pizza Fratello</span></div>
+        <div class="price-double">
+          <div class="price-label">Petit / Grand</div>
+          <div style="display:flex;gap:4px;">
+            <span class="price-tag price-small">33<sup>Dhs</sup></span>
+            <span class="price-tag price-big">45<sup>Dhs</sup></span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-info"><span class="item-name">Pizza Jumbo</span></div>
         <div class="price-double">
           <div class="price-label">Petit / Grand</div>
           <div style="display:flex;gap:4px;">
@@ -454,7 +413,37 @@
         </div>
       </div>
       <div class="menu-card">
-        <div class="item-info"><span class="item-name">Pizza Jumbo</span></div>
+        <div class="item-info"><span class="item-name">Pizza Royale</span></div>
+        <div class="price-double">
+          <div class="price-label">Petit / Grand</div>
+          <div style="display:flex;gap:4px;">
+            <span class="price-tag price-small">45<sup>Dhs</sup></span>
+            <span class="price-tag price-big">55<sup>Dhs</sup></span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-info"><span class="item-name">Pizza Pepperoni</span></div>
+        <div class="price-double">
+          <div class="price-label">Petit / Grand</div>
+          <div style="display:flex;gap:4px;">
+            <span class="price-tag price-small">33<sup>Dhs</sup></span>
+            <span class="price-tag price-big">45<sup>Dhs</sup></span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-info"><span class="item-name">Pizza Viande Hachée</span></div>
+        <div class="price-double">
+          <div class="price-label">Petit / Grand</div>
+          <div style="display:flex;gap:4px;">
+            <span class="price-tag price-small">34<sup>Dhs</sup></span>
+            <span class="price-tag price-big">45<sup>Dhs</sup></span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-info"><span class="item-name">Pizza Poulet ou Thon</span></div>
         <div class="price-double">
           <div class="price-label">Petit / Grand</div>
           <div style="display:flex;gap:4px;">
@@ -464,7 +453,7 @@
         </div>
       </div>
       <div class="menu-card">
-        <div class="item-info"><span class="item-name">Pizza Royale</span></div>
+        <div class="item-info"><span class="item-name">Pizza Mixte</span></div>
         <div class="price-double">
           <div class="price-label">Petit / Grand</div>
           <div style="display:flex;gap:4px;">
@@ -474,62 +463,22 @@
         </div>
       </div>
       <div class="menu-card">
-        <div class="item-info"><span class="item-name">Pizza Pepperoni</span></div>
-        <div class="price-double">
-          <div class="price-label">Petit / Grand</div>
-          <div style="display:flex;gap:4px;">
-            <span class="price-tag price-small">28<sup>Dhs</sup></span>
-            <span class="price-tag price-big">38<sup>Dhs</sup></span>
-          </div>
-        </div>
-      </div>
-      <div class="menu-card">
-        <div class="item-info"><span class="item-name">Pizza Viande Hachée</span></div>
-        <div class="price-double">
-          <div class="price-label">Petit / Grand</div>
-          <div style="display:flex;gap:4px;">
-            <span class="price-tag price-small">28<sup>Dhs</sup></span>
-            <span class="price-tag price-big">38<sup>Dhs</sup></span>
-          </div>
-        </div>
-      </div>
-      <div class="menu-card">
-        <div class="item-info"><span class="item-name">Pizza Poulet</span></div>
-        <div class="price-double">
-          <div class="price-label">Petit / Grand</div>
-          <div style="display:flex;gap:4px;">
-            <span class="price-tag price-small">25<sup>Dhs</sup></span>
-            <span class="price-tag price-big">35<sup>Dhs</sup></span>
-          </div>
-        </div>
-      </div>
-      <div class="menu-card">
-        <div class="item-info"><span class="item-name">Pizza Mixte</span></div>
-        <div class="price-double">
-          <div class="price-label">Petit / Grand</div>
-          <div style="display:flex;gap:4px;">
-            <span class="price-tag price-small">35<sup>Dhs</sup></span>
-            <span class="price-tag price-big">45<sup>Dhs</sup></span>
-          </div>
-        </div>
-      </div>
-      <div class="menu-card">
         <div class="item-info"><span class="item-name">Pizza Margarita</span></div>
         <div class="price-double">
           <div class="price-label">Petit / Grand</div>
           <div style="display:flex;gap:4px;">
             <span class="price-tag price-small">22<sup>Dhs</sup></span>
-            <span class="price-tag price-big">32<sup>Dhs</sup></span>
+            <span class="price-tag price-big">34<sup>Dhs</sup></span>
           </div>
         </div>
       </div>
       <div class="menu-card">
-        <div class="item-info"><span class="item-name">Pizza Moitié Moitié</span></div>
+        <div class="item-info"><span class="item-name">Pizza Thon</span></div>
         <div class="price-double">
           <div class="price-label">Petit / Grand</div>
           <div style="display:flex;gap:4px;">
-            <span class="price-tag price-small">35<sup>Dhs</sup></span>
-            <span class="price-tag price-big">45<sup>Dhs</sup></span>
+            <span class="price-tag price-small">30<sup>Dhs</sup></span>
+            <span class="price-tag price-big">42<sup>Dhs</sup></span>
           </div>
         </div>
       </div>
@@ -538,8 +487,8 @@
         <div class="price-double">
           <div class="price-label">Petit / Grand</div>
           <div style="display:flex;gap:4px;">
-            <span class="price-tag price-small">30<sup>Dhs</sup></span>
-            <span class="price-tag price-big">40<sup>Dhs</sup></span>
+            <span class="price-tag price-small">35<sup>Dhs</sup></span>
+            <span class="price-tag price-big">45<sup>Dhs</sup></span>
           </div>
         </div>
       </div>
@@ -548,8 +497,8 @@
         <div class="price-double">
           <div class="price-label">Petit / Grand</div>
           <div style="display:flex;gap:4px;">
-            <span class="price-tag price-small">35<sup>Dhs</sup></span>
-            <span class="price-tag price-big">45<sup>Dhs</sup></span>
+            <span class="price-tag price-small">40<sup>Dhs</sup></span>
+            <span class="price-tag price-big">55<sup>Dhs</sup></span>
           </div>
         </div>
       </div>
@@ -558,8 +507,8 @@
         <div class="price-double">
           <div class="price-label">Petit / Grand</div>
           <div style="display:flex;gap:4px;">
-            <span class="price-tag price-small">35<sup>Dhs</sup></span>
-            <span class="price-tag price-big">45<sup>Dhs</sup></span>
+            <span class="price-tag price-small">40<sup>Dhs</sup></span>
+            <span class="price-tag price-big">50<sup>Dhs</sup></span>
           </div>
         </div>
       </div>
@@ -568,30 +517,50 @@
         <div class="price-double">
           <div class="price-label">Petit / Grand</div>
           <div style="display:flex;gap:4px;">
-            <span class="price-tag price-small">35<sup>Dhs</sup></span>
-            <span class="price-tag price-big">45<sup>Dhs</sup></span>
+            <span class="price-tag price-small">40<sup>Dhs</sup></span>
+            <span class="price-tag price-big">55<sup>Dhs</sup></span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-info"><span class="item-name">Pizza Italiano</span></div>
+        <div class="price-double">
+          <div class="price-label">Petit / Grand</div>
+          <div style="display:flex;gap:4px;">
+            <span class="price-tag price-small">40<sup>Dhs</sup></span>
+            <span class="price-tag price-big">50<sup>Dhs</sup></span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="item-info"><span class="item-name">Pizza Tajine ⭐</span></div>
+        <div class="price-double">
+          <div class="price-label">Petit / Grand</div>
+          <div style="display:flex;gap:4px;">
+            <span class="price-tag price-small">40<sup>Dhs</sup></span>
+            <span class="price-tag price-big">50<sup>Dhs</sup></span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BURGER -->
+  <!-- ══ BURGER ══ -->
   <section class="menu-section fade-in" id="burger">
     <div class="section-header">
       <div class="section-badge badge-burger"><span class="emoji">🍔</span> BURGER</div>
     </div>
     <div class="menu-grid">
-      <div class="menu-card"><span class="item-name">Burger Crispy</span><span class="price-tag">29<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Cheese Burger</span><span class="price-tag">32<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Egg Burger</span><span class="price-tag">34<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Double Crispy</span><span class="price-tag">42<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Double Cheese</span><span class="price-tag">39<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Bœuf Poulet</span><span class="price-tag">39<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Crispy Burger</span><span class="price-tag">29<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Cheese Burger</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Egg Burger</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Double Crispy</span><span class="price-tag">40<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Double Cheese</span><span class="price-tag">40<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Bœuf Crispy</span><span class="price-tag">40<sup>Dhs</sup></span></div>
     </div>
   </section>
 
-  <!-- TACOS -->
+  <!-- ══ TACOS ══ -->
   <section class="menu-section fade-in" id="tacos">
     <div class="section-header">
       <div class="section-badge badge-tacos"><span class="emoji">🌮</span> TACOS</div>
@@ -599,12 +568,14 @@
     <div class="menu-grid">
       <div class="menu-card"><span class="item-name">Tacos Hot Dog</span><span class="price-tag">25<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Tacos Poulet</span><span class="price-tag">30<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Tacos Cordon Bleu</span><span class="price-tag">32<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Tacos Mixte</span><span class="price-tag">35<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Tacos Viande H.</span><span class="price-tag">32<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Tacos Nuggets</span><span class="price-tag">30<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Tacos Crespy</span><span class="price-tag">32<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Tacos Mexicain</span><span class="price-tag">32<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tacos Cordon Bleu</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tacos Mixte</span><span class="price-tag">38<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tacos Viande H.</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tacos Nuggets</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tacos Crespy</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tacos Mexicain</span><span class="price-tag">36<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tacos Original</span><span class="price-tag">34<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tacos Spicy 🌶️</span><span class="price-tag">34<sup>Dhs</sup></span></div>
     </div>
     <div class="section-note">
       <div>🧀 Gratiné <span>++ 8 Dhs</span></div>
@@ -612,38 +583,39 @@
     </div>
   </section>
 
-  <!-- PLATS -->
+  <!-- ══ PLATS ══ -->
   <section class="menu-section fade-in" id="plats">
     <div class="section-header">
       <div class="section-badge badge-plats"><span class="emoji">🥘</span> PLATS</div>
     </div>
     <div class="menu-grid">
-      <div class="menu-card"><span class="item-name">Plat Nuggets Chicken</span><span class="price-tag">35<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Plat Brochette</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Plat Nuggets Chicken</span><span class="price-tag">38<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Plat Brochette</span><span class="price-tag">38<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Plat Mixte</span><span class="price-tag">40<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Plat Chicken Strips</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Plat Chicken Strips</span><span class="price-tag">40<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Émincé De Poulet</span><span class="price-tag">40<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Plat Hiroshima</span><span class="price-tag">35<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Plat Viande Hachée</span><span class="price-tag">38<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Plat Hiroshima Poulet</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Plat Viande Hachée</span><span class="price-tag">40<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Plat Viande Stake ⭐</span><span class="price-tag">50<sup>Dhs</sup></span></div>
     </div>
   </section>
 
-  <!-- PASTICCIO -->
+  <!-- ══ PASTICCIO ══ -->
   <section class="menu-section fade-in" id="pasticcio">
     <div class="section-header">
       <div class="section-badge badge-pasticcio"><span class="emoji">🫓</span> PASTICCIO</div>
     </div>
     <div class="menu-grid">
       <div class="menu-card"><span class="item-name">Pasticcio Viande H</span><span class="price-tag">30<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Pasticcio Poulet</span><span class="price-tag">28<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Pasticcio Mixte</span><span class="price-tag">32<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Pasticcio Jumbo</span><span class="price-tag">25<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Pasticcio Hot Dog</span><span class="price-tag">25<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Pasticcio Nuggets</span><span class="price-tag">28<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Pasticcio Poulet</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Pasticcio Mixte</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Pasticcio Jumbo</span><span class="price-tag">28<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Pasticcio Hot Dog</span><span class="price-tag">28<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Pasticcio Nuggets</span><span class="price-tag">30<sup>Dhs</sup></span></div>
     </div>
   </section>
 
-  <!-- MKILA -->
+  <!-- ══ MKILA ══ -->
   <section class="menu-section fade-in" id="mkila">
     <div class="section-header">
       <div class="section-badge badge-mkila"><span class="emoji">🍳</span> MKILA</div>
@@ -661,7 +633,7 @@
           <span class="item-name">Mkila Viande H.</span>
           <span class="item-sub">Sauce tomate, viande hachée, fromage, œuf</span>
         </div>
-        <span class="price-tag">28<sup>Dhs</sup></span>
+        <span class="price-tag">30<sup>Dhs</sup></span>
       </div>
       <div class="menu-card">
         <div class="item-info">
@@ -675,40 +647,42 @@
           <span class="item-name">Mkila Sardine</span>
           <span class="item-sub">Sauce tomate, sardine, olives noires, œuf</span>
         </div>
-        <span class="price-tag">25<sup>Dhs</sup></span>
+        <span class="price-tag">30<sup>Dhs</sup></span>
       </div>
     </div>
   </section>
 
-  <!-- SANDWICHS -->
+  <!-- ══ SANDWICHS ══ -->
   <section class="menu-section fade-in" id="sandwich">
     <div class="section-header">
       <div class="section-badge badge-sandwich"><span class="emoji">🥐</span> SANDWICHS</div>
     </div>
     <div class="menu-grid">
       <div class="menu-card"><span class="item-name">Sandwich Poulet</span><span class="price-tag">25<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Sandwich Viande H.</span><span class="price-tag">28<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Sandwich Mixte</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Sandwich Viande H.</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Sandwich Mixte</span><span class="price-tag">32<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Sandwich Tortilla</span><span class="price-tag">20<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Sandwich Saucisses</span><span class="price-tag">25<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Sandwich Saucisses</span><span class="price-tag">30<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Sandwich Thon</span><span class="price-tag">20<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Sandwich Fruit de Mer ⭐</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Sandwich Twist Roller ⭐</span><span class="price-tag">28<sup>Dhs</sup></span></div>
     </div>
   </section>
 
-  <!-- PATES -->
+  <!-- ══ PÂTES ══ -->
   <section class="menu-section fade-in" id="pates">
     <div class="section-header">
       <div class="section-badge badge-pates"><span class="emoji">🍝</span> PÂTES — Spaghetti & Tagliatelle</div>
     </div>
     <div class="menu-grid">
-      <div class="menu-card"><span class="item-name">Pâtes Bolognaise</span><span class="price-tag">30<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Pâtes Carbonara</span><span class="price-tag">33<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Pâtes Arrabiata</span><span class="price-tag">25<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Pâtes Fruits de Mer</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Pâtes Bolognaise</span><span class="price-tag">38<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Pâtes Carbonara</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Pâtes Arrabiata</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Pâtes Fruits de Mer</span><span class="price-tag">40<sup>Dhs</sup></span></div>
     </div>
   </section>
 
-  <!-- BOCA -->
+  <!-- ══ BOCA ══ -->
   <section class="menu-section fade-in" id="boca">
     <div class="section-header">
       <div class="section-badge badge-boca"><span class="emoji">🍗</span> BOCA</div>
@@ -716,113 +690,152 @@
     <div class="menu-grid">
       <div class="menu-card"><span class="item-name">Boca Mexicain</span><span class="price-tag">35<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Boca Original</span><span class="price-tag">35<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Boca Spicy</span><span class="price-tag">33<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Boca Spicy 🌶️</span><span class="price-tag">35<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Boca Pizza</span><span class="price-tag">35<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Boca Américaine</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Boca Américaine</span><span class="price-tag">38<sup>Dhs</sup></span></div>
     </div>
   </section>
 
-  <!-- CALZONE -->
+  <!-- ══ CALZONE ══ -->
   <section class="menu-section fade-in" id="calzone">
     <div class="section-header">
       <div class="section-badge badge-calzone"><span class="emoji">🥟</span> CALZONE</div>
     </div>
     <div class="menu-grid">
-      <div class="menu-card"><span class="item-name">Calzone Poulet</span><span class="price-tag">30<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Calzone Viande H.</span><span class="price-tag">30<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Calzone Mixte</span><span class="price-tag">35<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Calzone Thon</span><span class="price-tag">25<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Calzone Poulet</span><span class="price-tag">33<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Calzone Viande H.</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Calzone Mixte</span><span class="price-tag">38<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Calzone Thon</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+    </div>
+    <div class="section-note">
+      <div>🧀 Gratiné <span>++ 10 Dhs</span></div>
+      <div>📦 Jumbo <span>++ 10 Dhs</span></div>
+      <div>🍕 Pizza <span>++ 8 Dhs</span></div>
     </div>
   </section>
 
-  <!-- CHAWARMA -->
+  <!-- ══ CHAWARMA ══ -->
   <section class="menu-section fade-in" id="chawarma">
     <div class="section-header">
       <div class="section-badge badge-chawarma"><span class="emoji">🌯</span> CHAWARMA</div>
     </div>
     <div class="menu-grid">
-      <div class="menu-card"><span class="item-name">Chawarma Sandwichs</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Chawarma Sandwichs</span><span class="price-tag">32<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Chawarma Plat</span><span class="price-tag">40<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Chawarma Tacos</span><span class="price-tag">35<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Chawarma Pizza</span><span class="price-tag">30<sup>Dhs</sup></span></div>
     </div>
   </section>
 
-  <!-- KOMPIR -->
+  <!-- ══ KOMPIR ══ -->
   <section class="menu-section fade-in" id="kompir">
     <div class="section-header">
       <div class="section-badge badge-kompir"><span class="emoji">🥔</span> KOMPIR</div>
     </div>
     <div class="menu-grid">
       <div class="menu-card"><span class="item-name">Kompir Viande H</span><span class="price-tag">35<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Kompir Poulet</span><span class="price-tag">33<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Kompir Thon</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Kompir Poulet</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Kompir Thon</span><span class="price-tag">33<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Kompir Mixte</span><span class="price-tag">40<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Kompir Normal</span><span class="price-tag">25<sup>Dhs</sup></span></div>
     </div>
   </section>
 
-  <!-- CREPE -->
+  <!-- ══ CRÊPES ══ -->
   <section class="menu-section fade-in" id="crepe">
     <div class="section-header">
       <div class="section-badge badge-crepe"><span class="emoji">🥞</span> CRÊPES</div>
     </div>
     <div class="menu-grid">
-      <div class="menu-card"><span class="item-name">Crêpe Normal</span><span class="price-tag" style="background:linear-gradient(135deg,#888,#666);">—<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Crêpe Banane</span><span class="price-tag" style="background:linear-gradient(135deg,#888,#666);">—<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Crêpe Nutella</span><span class="price-tag" style="background:linear-gradient(135deg,#888,#666);">—<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Crêpe Royale</span><span class="price-tag" style="background:linear-gradient(135deg,#888,#666);">—<sup>Dhs</sup></span></div>
-    </div>
-    <div class="section-note" style="color:#555;font-size:0.78rem;">
-      💬 Demandez les prix en magasin ou par téléphone : <span style="color:var(--red2);">05 38 11 64 28</span>
+      <div class="menu-card"><span class="item-name">Crêpe Kunafa ⭐</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Crêpe Banane</span><span class="price-tag">20<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Crêpe Nutella</span><span class="price-tag">15<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Crêpe Royale</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Crêpe Doces ⭐</span><span class="price-tag">35<sup>Dhs</sup></span></div>
     </div>
   </section>
 
-  <!-- SALADES -->
+  <!-- ══ SALADES ══ -->
   <section class="menu-section fade-in" id="salades">
     <div class="section-header">
       <div class="section-badge badge-salades"><span class="emoji">🥗</span> SALADES</div>
     </div>
     <div class="menu-grid">
       <div class="menu-card"><span class="item-name">Salade Marocaine</span><span class="price-tag">15<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Salade Mexicaine</span><span class="price-tag">22<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Salade Italienne</span><span class="price-tag">20<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Salade Mexicaine</span><span class="price-tag">25<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Salade Italienne</span><span class="price-tag">25<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Salade Niçoise</span><span class="price-tag">20<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Salade Pichor</span><span class="price-tag">30<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Salade Fratello</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Salade Pichor</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Salade Fratello</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Salade César ⭐</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Salade Sigoult ⭐</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Salade Crespy ⭐</span><span class="price-tag">30<sup>Dhs</sup></span></div>
     </div>
   </section>
 
-  <!-- DESSERTS -->
+  <!-- ══ DESSERTS ══ -->
   <section class="menu-section fade-in" id="desserts">
     <div class="section-header">
       <div class="section-badge badge-desserts"><span class="emoji">🍮</span> DESSERTS</div>
     </div>
     <div class="menu-grid">
-      <div class="menu-card"><span class="item-name">Tiramisu</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tiramisu Chocolat</span><span class="price-tag">15<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tiramisu Caramels</span><span class="price-tag">15<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tiramisu Citron</span><span class="price-tag">18<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tiramisu Framboises</span><span class="price-tag">18<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tiramisu Fraise</span><span class="price-tag">15<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tiramisu Kunafa</span><span class="price-tag">18<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tiramisu LOTUS ⭐</span><span class="price-tag">20<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Tiramisu Pistache ⭐</span><span class="price-tag">20<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Salade de Fruits</span><span class="price-tag">30<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Mahalabia</span><span class="price-tag">30<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Cheesecake</span><span class="price-tag">30<sup>Dhs</sup></span></div>
     </div>
   </section>
 
-  <!-- JUS -->
+  <!-- ══ JUS ══ -->
   <section class="menu-section fade-in" id="jus">
     <div class="section-header">
       <div class="section-badge badge-jus"><span class="emoji">🧃</span> JUS FRAIS</div>
     </div>
     <div class="menu-grid">
-      <div class="menu-card"><span class="item-name">Jus d'Orange</span><span class="price-tag">13<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Jus de Citron</span><span class="price-tag">10<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Jus d'Orange</span><span class="price-tag">15<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Jus de Citron</span><span class="price-tag">13<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Avocat au Lait</span><span class="price-tag">18<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Avocat à l'Orange</span><span class="price-tag">20<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Avocat à l'Orange</span><span class="price-tag">22<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Avocat Lait & Fruits Secs</span><span class="price-tag">25<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Jus de Pomme</span><span class="price-tag">13<sup>Dhs</sup></span></div>
       <div class="menu-card"><span class="item-name">Jus de Banane</span><span class="price-tag">13<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Jus Panaché</span><span class="price-tag">18<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Jus Tropical</span><span class="price-tag">20<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Jus Exotique</span><span class="price-tag">23<sup>Dhs</sup></span></div>
-      <div class="menu-card"><span class="item-name">Jus ZaaZaa ✨</span><span class="price-tag">30<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Jus Panaché</span><span class="price-tag">20<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Jus Tropical</span><span class="price-tag">22<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Jus Exotique</span><span class="price-tag">25<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Jus ZaaZaa ✨</span><span class="price-tag">35<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Raib ZaaZaa Baldi ⭐</span><span class="price-tag">25<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">MokhiTo ⭐</span><span class="price-tag">15<sup>Dhs</sup></span></div>
+    </div>
+  </section>
+
+  <!-- ══ BOISSON CHAUDE ══ -->
+  <section class="menu-section fade-in" id="boisson">
+    <div class="section-header">
+      <div class="section-badge badge-boisson"><span class="emoji">☕</span> BOISSON CHAUDE</div>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card"><span class="item-name">Café Normale</span><span class="price-tag">13<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Café Espresso</span><span class="price-tag">13<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Café Cappuccino</span><span class="price-tag">13<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Café American</span><span class="price-tag">13<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Café au Lait</span><span class="price-tag">15<sup>Dhs</sup></span></div>
+    </div>
+  </section>
+
+  <!-- ══ SUPPLÉMENT ══ -->
+  <section class="menu-section fade-in" id="supplement">
+    <div class="section-header">
+      <div class="section-badge badge-supplement"><span class="emoji">➕</span> SUPPLÉMENT</div>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card"><span class="item-name">Ration Frite</span><span class="price-tag">10<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Fromage</span><span class="price-tag">10<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Sauce Algérienne</span><span class="price-tag">5<sup>Dhs</sup></span></div>
+      <div class="menu-card"><span class="item-name">Eau Minérale</span><span class="price-tag">11<sup>Dhs</sup></span></div>
     </div>
   </section>
 
@@ -844,7 +857,11 @@
     </div>
     <div class="footer-item fi-red">
       <span class="icon">📞</span>
-      <a href="tel:0538116428">05 38 11 64 28</a>
+      <a href="tel:0677672911">06 77 67 29 11</a>
+    </div>
+    <div class="footer-item fi-red">
+      <span class="icon">📞</span>
+      <a href="tel:0618250885">06 18 25 08 85</a>
     </div>
     <div class="footer-item fi-gold">
       <span class="icon">📍</span>
@@ -861,7 +878,7 @@
 </footer>
 
 <!-- ── CALL BUTTON ── -->
-<a class="call-btn" href="tel:0538116428" title="Commander par téléphone">
+<a class="call-btn" href="tel:0677672911" title="Commander par téléphone">
   <div class="call-pulse"></div>
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
@@ -874,9 +891,9 @@
   }, { threshold: 0.07 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  const sections  = document.querySelectorAll('.menu-section');
-  const navLinks  = document.querySelectorAll('.nav-links a');
-  const secObs = new IntersectionObserver((entries) => {
+  const sections = document.querySelectorAll('.menu-section');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const secObs  = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         const id = e.target.id;
